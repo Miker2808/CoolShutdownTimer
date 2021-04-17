@@ -16,6 +16,14 @@ Window {
     property color property_secondary_color: "#404040"
     property color property_third_color: "#b3b3b3"
 
+    function loadColors(){
+        root.property_primary_color = backend.PrimaryColorProperty
+        itemColorChoiceBarPrimary.setPrimaryColor(backend.PrimaryColorProperty)
+        itemColorChoiceBarSecondary.setSecondaryColor(backend.SecondaryColorProperty)
+        itemColorChoiceBarText.setTextColor(backend.ThirdColorProperty)
+        console.log("I'm here2")
+    }
+
 
     id: root
     flags: Qt.FramelessWindowHint | Qt.Window
@@ -28,6 +36,9 @@ Window {
         console.log("Visiblity changed"); // postponed for future updates
     }
 
+    Component.onCompleted: {
+        root.loadColors()
+    }
 
     Item {
         id: itemTitleBar
@@ -1379,6 +1390,9 @@ Window {
     Item {
         // function used to set Colors to the whole graphical user interface - called on every color option with its own colors
         function setPreviewColors(primary_color, secondary_color){
+            backend.setPrimaryColorProperty(primary_color)
+            backend.setSecondaryColorProperty(secondary_color)
+            backend.setThirdColorProperty("#b3b3b3")
             root.property_primary_color = primary_color
             root.property_secondary_color = secondary_color
             root.property_third_color = "#b3b3b3"
@@ -1977,10 +1991,6 @@ Window {
             }
 
 
-            // start here (settings widow)
-
-
-
             Text {
                 id: textPrimaryColor
                 text: qsTr("PRIMARY COLOR")
@@ -2027,6 +2037,11 @@ Window {
             }
 
             Item {
+                function setPrimaryColor(primary_color){
+                    root.property_primary_color = primary_color
+                    backend.setPrimaryColorProperty(primary_color);
+                }
+
                 id: itemColorChoiceBarPrimary
                 x: 20
                 y: 164
@@ -2061,7 +2076,7 @@ Window {
                             rectPrimaryColorOption1.anchors.bottomMargin = 0
                         }
                         onClicked: {
-                            root.property_primary_color = rectPrimaryColorOption1.color
+                            itemColorChoiceBarPrimary.setPrimaryColor(rectPrimaryColorOption1.color)
                         }
                     }
                 }
@@ -2090,7 +2105,7 @@ Window {
                             rectPrimaryColorOption2.anchors.bottomMargin = 0
                         }
                         onClicked: {
-                            root.property_primary_color = rectPrimaryColorOption2.color
+                            itemColorChoiceBarPrimary.setPrimaryColor(rectPrimaryColorOption2.color)
                         }
                     }
                 }
@@ -2119,7 +2134,7 @@ Window {
                             rectPrimaryColorOption3.anchors.bottomMargin = 0
                         }
                         onClicked: {
-                            root.property_primary_color = rectPrimaryColorOption3.color
+                            itemColorChoiceBarPrimary.setPrimaryColor(rectPrimaryColorOption3.color)
                         }
                     }
                 }
@@ -2148,7 +2163,7 @@ Window {
                             rectPrimaryColorOption4.anchors.bottomMargin = 0
                         }
                         onClicked: {
-                            root.property_primary_color = rectPrimaryColorOption4.color
+                            itemColorChoiceBarPrimary.setPrimaryColor(rectPrimaryColorOption4.color)
                         }
                     }
                 }
@@ -2176,7 +2191,7 @@ Window {
                             rectPrimaryColorOption5.anchors.bottomMargin = 0
                         }
                         onClicked: {
-                            root.property_primary_color = rectPrimaryColorOption5.color
+                            itemColorChoiceBarPrimary.setPrimaryColor(rectPrimaryColorOption5.color)
                         }
                     }
                 }
@@ -2204,7 +2219,7 @@ Window {
                             rectPrimaryColorOption6.anchors.bottomMargin = 0
                         }
                         onClicked: {
-                            root.property_primary_color = rectPrimaryColorOption6.color
+                            itemColorChoiceBarPrimary.setPrimaryColor(rectPrimaryColorOption6.color)
                         }
                     }
                 }
@@ -2232,7 +2247,7 @@ Window {
                             rectPrimaryColorOption7.anchors.bottomMargin = 0
                         }
                         onClicked: {
-                            root.property_primary_color = rectPrimaryColorOption7.color
+                            itemColorChoiceBarPrimary.setPrimaryColor(rectPrimaryColorOption7.color)
                         }
                     }
                 }
@@ -2260,7 +2275,7 @@ Window {
                             rectPrimaryColorOption8.anchors.bottomMargin = 0
                         }
                         onClicked: {
-                            root.property_primary_color = rectPrimaryColorOption8.color
+                            itemColorChoiceBarPrimary.setPrimaryColor(rectPrimaryColorOption8.color)
                         }
                     }
                 }
@@ -2288,7 +2303,7 @@ Window {
                             rectPrimaryColorOption9.anchors.bottomMargin = 0
                         }
                         onClicked: {
-                            root.property_primary_color = rectPrimaryColorOption9.color
+                            itemColorChoiceBarPrimary.setPrimaryColor(rectPrimaryColorOption9.color)
                         }
                     }
                 }
@@ -2316,7 +2331,7 @@ Window {
                             rectPrimaryColorOption10.anchors.bottomMargin = 0
                         }
                         onClicked: {
-                            root.property_primary_color = rectPrimaryColorOption10.color
+                            itemColorChoiceBarPrimary.setPrimaryColor(rectPrimaryColorOption10.color)
                         }
                     }
                 }
@@ -2344,7 +2359,7 @@ Window {
                             rectPrimaryColorOption11.anchors.bottomMargin = 0
                         }
                         onClicked: {
-                            root.property_primary_color = rectPrimaryColorOption11.color
+                            itemColorChoiceBarPrimary.setPrimaryColor(rectPrimaryColorOption11.color)
                         }
                     }
                 }
@@ -2372,7 +2387,7 @@ Window {
                             rectPrimaryColorOption12.anchors.bottomMargin = 0
                         }
                         onClicked: {
-                            root.property_primary_color = rectPrimaryColorOption12.color
+                            itemColorChoiceBarPrimary.setPrimaryColor(rectPrimaryColorOption12.color)
                         }
                     }
                 }
@@ -2400,7 +2415,7 @@ Window {
                             rectPrimaryColorOption13.anchors.bottomMargin = 0
                         }
                         onClicked: {
-                            root.property_primary_color = rectPrimaryColorOption13.color
+                            itemColorChoiceBarPrimary.setPrimaryColor(rectPrimaryColorOption13.color)
                         }
                     }
                 }
@@ -2428,7 +2443,7 @@ Window {
                             rectPrimaryColorOption14.anchors.bottomMargin = 0
                         }
                         onClicked: {
-                            root.property_primary_color = rectPrimaryColorOption14.color
+                            itemColorChoiceBarPrimary.setPrimaryColor(rectPrimaryColorOption14.color)
                         }
                     }
                 }
@@ -2457,7 +2472,7 @@ Window {
                             rectPrimaryColorOption15.anchors.bottomMargin = 0
                         }
                         onClicked: {
-                            root.property_primary_color = rectPrimaryColorOption15.color
+                            itemColorChoiceBarPrimary.setPrimaryColor(rectPrimaryColorOption15.color)
                         }
                     }
                 }
@@ -2485,7 +2500,7 @@ Window {
                             rectPrimaryColorOption16.anchors.bottomMargin = 0
                         }
                         onClicked: {
-                            root.property_primary_color = rectPrimaryColorOption16.color
+                            itemColorChoiceBarPrimary.setPrimaryColor(rectPrimaryColorOption16.color)
                         }
                     }
                 }
@@ -2513,14 +2528,15 @@ Window {
                             rectPrimaryColorOption17.anchors.bottomMargin = 0
                         }
                         onClicked: {
-                            root.property_primary_color = rectPrimaryColorOption17.color
+                            itemColorChoiceBarPrimary.setPrimaryColor(rectPrimaryColorOption17.color)
                         }
                     }
                 }
             }
 
             Item {
-                function setColors(color_variable){
+                function setSecondaryColor(color_variable){
+                    backend.setSecondaryColorProperty(color_variable)
                     root.property_secondary_color = color_variable
                     rectTopButton.color = color_variable
 
@@ -2573,7 +2589,7 @@ Window {
                         }
 
                         onClicked: {
-                            itemColorChoiceBarSecondary.setColors(rectSecondaryColorOption1.color)
+                            itemColorChoiceBarSecondary.setSecondaryColor(rectSecondaryColorOption1.color)
 
 
                         }
@@ -2605,7 +2621,7 @@ Window {
                         }
 
                         onClicked: {
-                            itemColorChoiceBarSecondary.setColors(rectSecondaryColorOption2.color)
+                            itemColorChoiceBarSecondary.setSecondaryColor(rectSecondaryColorOption2.color)
                         }
 
                     }
@@ -2635,7 +2651,7 @@ Window {
                         }
 
                         onClicked: {
-                            itemColorChoiceBarSecondary.setColors(rectSecondaryColorOption3.color)
+                            itemColorChoiceBarSecondary.setSecondaryColor(rectSecondaryColorOption3.color)
                         }
 
                     }
@@ -2665,7 +2681,7 @@ Window {
                         }
 
                         onClicked: {
-                            itemColorChoiceBarSecondary.setColors(rectSecondaryColorOption4.color)
+                            itemColorChoiceBarSecondary.setSecondaryColor(rectSecondaryColorOption4.color)
                         }
 
                     }
@@ -2695,7 +2711,7 @@ Window {
                         }
 
                         onClicked: {
-                            itemColorChoiceBarSecondary.setColors(rectSecondaryColorOption5.color)
+                            itemColorChoiceBarSecondary.setSecondaryColor(rectSecondaryColorOption5.color)
                         }
 
                     }
@@ -2725,7 +2741,7 @@ Window {
                         }
 
                         onClicked: {
-                            itemColorChoiceBarSecondary.setColors(rectSecondaryColorOption6.color)
+                            itemColorChoiceBarSecondary.setSecondaryColor(rectSecondaryColorOption6.color)
                         }
 
                     }
@@ -2755,7 +2771,7 @@ Window {
                         }
 
                         onClicked: {
-                            itemColorChoiceBarSecondary.setColors(rectSecondaryColorOption6.color)
+                            itemColorChoiceBarSecondary.setSecondaryColor(rectSecondaryColorOption6.color)
                         }
 
                     }
@@ -2784,7 +2800,7 @@ Window {
                             rectSecondaryColorOption8.anchors.bottomMargin = 0
                         }
                         onClicked: {
-                            itemColorChoiceBarSecondary.setColors(rectSecondaryColorOption8.color)
+                            itemColorChoiceBarSecondary.setSecondaryColor(rectSecondaryColorOption8.color)
                         }
 
                     }
@@ -2814,7 +2830,7 @@ Window {
                         }
 
                         onClicked: {
-                            itemColorChoiceBarSecondary.setColors(rectSecondaryColorOption9.color)
+                            itemColorChoiceBarSecondary.setSecondaryColor(rectSecondaryColorOption9.color)
                         }
 
                     }
@@ -2844,7 +2860,7 @@ Window {
                         }
 
                         onClicked: {
-                            itemColorChoiceBarSecondary.setColors(rectSecondaryColorOption10.color)
+                            itemColorChoiceBarSecondary.setSecondaryColor(rectSecondaryColorOption10.color)
                         }
 
                     }
@@ -2874,7 +2890,7 @@ Window {
                         }
 
                         onClicked: {
-                            itemColorChoiceBarSecondary.setColors(rectSecondaryColorOption11.color)
+                            itemColorChoiceBarSecondary.setSecondaryColor(rectSecondaryColorOption11.color)
                         }
 
                     }
@@ -2904,7 +2920,7 @@ Window {
                         }
 
                         onClicked: {
-                            itemColorChoiceBarSecondary.setColors(rectSecondaryColorOption12.color)
+                            itemColorChoiceBarSecondary.setSecondaryColor(rectSecondaryColorOption12.color)
                         }
 
                     }
@@ -2934,7 +2950,7 @@ Window {
                         }
 
                         onClicked: {
-                            itemColorChoiceBarSecondary.setColors(rectSecondaryColorOption13.color)
+                            itemColorChoiceBarSecondary.setSecondaryColor(rectSecondaryColorOption13.color)
                         }
 
                     }
@@ -2964,7 +2980,7 @@ Window {
                         }
 
                         onClicked: {
-                            itemColorChoiceBarSecondary.setColors(rectSecondaryColorOption14.color)
+                            itemColorChoiceBarSecondary.setSecondaryColor(rectSecondaryColorOption14.color)
                         }
 
                     }
@@ -2995,7 +3011,7 @@ Window {
                         }
 
                         onClicked: {
-                            itemColorChoiceBarSecondary.setColors(rectSecondaryColorOption15.color)
+                            itemColorChoiceBarSecondary.setSecondaryColor(rectSecondaryColorOption15.color)
                         }
 
                     }
@@ -3026,7 +3042,7 @@ Window {
                         }
 
                         onClicked: {
-                            itemColorChoiceBarSecondary.setColors(rectSecondaryColorOption16.color)
+                            itemColorChoiceBarSecondary.setSecondaryColor(rectSecondaryColorOption16.color)
                         }
 
                     }
@@ -3056,7 +3072,7 @@ Window {
                         }
 
                         onClicked: {
-                            itemColorChoiceBarSecondary.setColors(rectSecondaryColorOption17.color)
+                            itemColorChoiceBarSecondary.setSecondaryColor(rectSecondaryColorOption17.color)
                         }
 
                     }
@@ -3065,6 +3081,7 @@ Window {
 
             Item {
                 function setTextColor(text_color_variable){
+                    backend.setThirdColorProperty(text_color_variable)
                     root.property_third_color = text_color_variable
                     labelActionChosen.color = text_color_variable
                     labelChooseFirst.color = text_color_variable
@@ -3624,6 +3641,6 @@ Window {
 
 /*##^##
 Designer {
-    D{i:0;formeditorZoom:1.33}D{i:1;locked:true}
+    D{i:0;formeditorZoom:1.33}D{i:1;locked:true}D{i:2;locked:true}D{i:21;locked:true}
 }
 ##^##*/

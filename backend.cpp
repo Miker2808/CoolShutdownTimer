@@ -3,6 +3,7 @@
 #include <iostream>
 #include <string>
 
+
 BackEnd::BackEnd( QObject *parent) : QObject(parent)
 {
     connect(timer, SIGNAL(timeout()), this, SLOT(TimerIntervalCalled())); // connects QTimer's timeout signal to custom slot
@@ -11,9 +12,33 @@ BackEnd::BackEnd( QObject *parent) : QObject(parent)
     setHoursValue(0);
     setSecondsValue(0);
     setMinutesValue(0);
+    LoadSettings();
+
+
 
 }
 
+
+void BackEnd::LoadSettings(){
+     bool is_contained = settings->contains("Color/Primary");
+     if (is_contained == false){ // check if settings exist - create if true, load if false
+        settings->setValue("Color/Primary", "#535353");
+        settings->setValue("Color/Secondary", "#404040");
+        settings->setValue("Color/Third", "#b3b3b3");
+        setPrimaryColorProperty("#535353");
+        setSecondaryColorProperty("#404040");
+        setThirdColorProperty("#b3b3b3");
+     }
+     else if(is_contained == true){
+         QString primary_color = settings->value("Color/Primary").value<QString>();
+         QString secondary_color = settings->value("Color/Secondary").value<QString>();
+         QString third_color = settings->value("Color/Third").value<QString>();
+         setPrimaryColorProperty(primary_color);
+         setSecondaryColorProperty(secondary_color);
+         setThirdColorProperty(third_color);
+
+     }
+}
 
 
 // convert std::string to QString
@@ -29,6 +54,10 @@ std::string BackEnd::fromQString(QString const &s)
 
 // Called when exit applicaton button clicked (closes application)
 void BackEnd::customCloseApp(){
+    settings->setValue("Color/Primary", m_PrimaryColorProperty);
+    settings->setValue("Color/Secondary", m_SecondaryColorProperty);
+    settings->setValue("Color/Third", m_ThirdColorProperty);
+
     QCoreApplication::quit();
 }
 
