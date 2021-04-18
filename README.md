@@ -1,7 +1,3 @@
-<p align="center">
-# CoolShutdownTimer
-A shutdown timer created with Qt QML
-</p>
 
 <!-- PROJECT LOGO -->
 <br />
@@ -10,5 +6,7 @@ A shutdown timer created with Qt QML
   </a>
 
   <h3 align="center">CoolShutdownTimer</h3>
+  <p align="center>
+  A shutdown timer developed in Qt with Qml
 </p>
 
