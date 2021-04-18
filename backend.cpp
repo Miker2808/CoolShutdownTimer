@@ -18,7 +18,7 @@ BackEnd::BackEnd( QObject *parent) : QObject(parent)
 
 }
 
-
+// loads the settings on initiation, sets configuration if no configurations exist.
 void BackEnd::LoadSettings(){
      bool is_contained = settings->contains("Color/Primary");
      if (is_contained == false){ // check if settings exist - create if true, load if false
@@ -64,7 +64,6 @@ void BackEnd::customCloseApp(){
 // Changes the action to perform (shutdown,reboot,etc..) (called from QML (front end) side)
 void BackEnd::setActionChosen(QString str_param){
     this->action_chosen = str_param;
-    std::cout << fromQString(this->action_chosen) << std::endl;
 }
 // Called on START timer button click (called from QML side)
 void BackEnd::onStartTimerButton_Clicked(bool is_start_timer){
@@ -73,8 +72,8 @@ void BackEnd::onStartTimerButton_Clicked(bool is_start_timer){
         this->setTimerStartSecondsValue(TimerStartSecondsValue);  // set property of total number of seconds (used to calculate timer bar in TimerIntervalCalled) (value doesnt change until reset)
         this->setTimerSecondsValueLeft(TimerStartSecondsValue); // set property of total number of seconds (Value changes every second)
         this->timer->start(1000); // starts the timer with interval of 1000ms (timer is auto-repeating - it wont stop after 1000ms, but will restart)
-
     }
+
     else if (is_start_timer == false){  // stops the timer and resets time
         this->setTimerSecondsValueLeft(0);
         this->timer->stop();
@@ -84,7 +83,6 @@ void BackEnd::onStartTimerButton_Clicked(bool is_start_timer){
 // called every 1000ms (1 second) after timer has been started
 void BackEnd::TimerIntervalCalled(){
     setTimerSecondsValueLeft(getTimerSecondsValueLeft() - 1); // decrease 1 second from timer
-    std::cout << getTimerSecondsValueLeft() << std::endl; // print for debugging
     if (this->getTimerSecondsValueLeft() < 1){ // action to perform when timers time reaches 0
         // perform shutdown action
         PerformShutdownOperation();
@@ -96,7 +94,6 @@ void BackEnd::TimerIntervalCalled(){
         int minutes_left = (getTimerSecondsValueLeft() - (hours_left * 3600)) / 60;
         int seconds_left = (getTimerSecondsValueLeft() - (hours_left * 3600) - (minutes_left * 60));
 
-        std::cout << "H:" << hours_left << " M:" << minutes_left << " S:" << seconds_left << std::endl; // for debug
         setHoursValue(hours_left);
         setMinutesValue(minutes_left);
         setSecondsValue(seconds_left);

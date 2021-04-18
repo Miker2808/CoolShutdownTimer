@@ -16,12 +16,12 @@ Window {
     property color property_secondary_color: "#404040"
     property color property_third_color: "#b3b3b3"
 
+    // sets the colors of the whole GUI
     function loadColors(){
         root.property_primary_color = backend.PrimaryColorProperty
         itemColorChoiceBarPrimary.setPrimaryColor(backend.PrimaryColorProperty)
         itemColorChoiceBarSecondary.setSecondaryColor(backend.SecondaryColorProperty)
         itemColorChoiceBarText.setTextColor(backend.ThirdColorProperty)
-        console.log("I'm here2")
     }
 
 
@@ -33,9 +33,10 @@ Window {
     color: root.property_primary_color // "#2d2d2d"
 
     onVisibilityChanged: {
-        console.log("Visiblity changed"); // postponed for future updates
+        //console.log("Visiblity changed"); // postponed for future updates
     }
 
+    // when window object finishes loading (onCompleted), run the loadColors function.
     Component.onCompleted: {
         root.loadColors()
     }
