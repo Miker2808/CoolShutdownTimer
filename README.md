@@ -31,4 +31,5 @@ action will take its place. the action can be changed while the timer runs, as t
 ### The Custom Title Bar
 
 The standard title bar that comes with windows 10 is very limited, to keep the modern look I used Qt's built-in features to create a custom title bar with all the features windows 10 has.
+
 ![TitleBar-Showcase](https://i.imgur.com/6fj8lMT.gif)
