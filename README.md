@@ -22,7 +22,7 @@ The values are validated and allow only integers from a certain value.
 ![Timer-Showcase](https://i.imgur.com/VJXEyC8.gif)
 
 
-<br />
+------
 ### The Action Bar
 
 The action bar, allows the user to choose what action to perform once timer reaches zero. The action bar will change the leftmost action with whatever was clicked, and the last
@@ -30,7 +30,7 @@ action will take its place. the action can be changed while the timer runs, as t
 
 ![ActionBar-Showcase](https://i.imgur.com/wEq0YUM.gif)
 
-<br />
+------
 ### The Custom Title Bar
 
 
@@ -38,21 +38,21 @@ The standard title bar that comes with windows 10 is very limited, to keep the m
 
 ![TitleBar-Showcase](https://i.imgur.com/6fj8lMT.gif)
 
-<br />
+------
 ### Settings window with preset colors
 
 The software allows customizing your user interface by adding a settings window, allowing you to choose one of the preset color packs.
 
 ![PresetColor-Showcase](https://i.imgur.com/iGp3ae1.gif)
 
-<br />
+------
 ### Custom Color choice, with handmade color picker
 
 The user can choose a custom color for three properties, the picking is done by choosing a color from a custom color picker.
 
 ![CustomColor-Showcase](https://i.imgur.com/jdprm42.gif)
 
-<br />
+------
 ### Save settings with configuration file
 
 The software creates a config.ini file on first execution, the file will be placed inside the executables directory.
@@ -75,7 +75,29 @@ If the issue persists, please file an issue.
 
 The Built Binaries can be downloaded [Here](https://mega.nz/file/JA83xYzK#GYoo9cFnoEAI3OLArlccGhmjbfGgmzvos969N24lE0Q "Download Through mega.nz")
 
-<br />
+To execute, simply extract the folder to a desired location and run the executable
+
+------
 ### Source
+To compile the project yourself you will need the following:
+* Qt 5.15 (Was developed on Qt 5.15.2)
+* Desktop kit and development tools (Mingw810_64, Mingw810_32, MSVC2015_64) Project was compiled successfully with mingw810 64bit, 32bit and MSVC2015 64bit.
+
+**Project was tested only on Windows 10, it might compile successfully on windows7, windows8, and ubuntu (using mingw)**
+
+The steps required to compile the project:
+1. Clone the project from the desired length
+2. Open the project (Double clicking the .pro file) or **File -> Open Project -> {navigate the .pro file}
+3. Choose the desired kit/s (Mingw x64, Mingw x32, MSVC)
+4. clean project using **Build -> Clean all projects for all configurations** 
+5. run qmake **Build -> Run Qmake** 
+6. build project
+
+## Licenses
+Software was developed following Qts General Public License, by using Qt for open source, software must follow GNU license, and disclose the code and its source.
+For more information feel free to check Qt's website [Here](https://www.qt.io "Qt website")
+**Icons were developed by me, for free, unlimited use**
+
+
 
 
