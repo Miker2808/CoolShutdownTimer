@@ -22,16 +22,15 @@ The values are validated and allow only integers from a certain value.
 ![Timer-Showcase](https://i.imgur.com/VJXEyC8.gif)
 
 
-
+<br />
 ### The Action Bar
-------
 
 The action bar, allows the user to choose what action to perform once timer reaches zero. The action bar will change the leftmost action with whatever was clicked, and the last
 action will take its place. the action can be changed while the timer runs, as the shutdown process executes only at zero seconds.
 
 ![ActionBar-Showcase](https://i.imgur.com/wEq0YUM.gif)
 
-------
+<br />
 ### The Custom Title Bar
 
 
@@ -39,21 +38,21 @@ The standard title bar that comes with windows 10 is very limited, to keep the m
 
 ![TitleBar-Showcase](https://i.imgur.com/6fj8lMT.gif)
 
-------
+<br />
 ### Settings window with preset colors
 
 The software allows customizing your user interface by adding a settings window, allowing you to choose one of the preset color packs.
 
 ![PresetColor-Showcase](https://i.imgur.com/iGp3ae1.gif)
 
-------
+<br />
 ### Custom Color choice, with handmade color picker
 
 The user can choose a custom color for three properties, the picking is done by choosing a color from a custom color picker.
 
 ![CustomColor-Showcase](https://i.imgur.com/jdprm42.gif)
 
-------
+<br />
 ### Save settings with configuration file
 
 The software creates a config.ini file on first execution, the file will be placed inside the executables directory.
@@ -75,7 +74,8 @@ Users may get MSVC errors, if you get dll errors, downloading the Microsoft Visu
 If the issue persists, please file an issue.
 
 The Built Binaries can be downloaded [Here](https://mega.nz/file/JA83xYzK#GYoo9cFnoEAI3OLArlccGhmjbfGgmzvos969N24lE0Q "Download Through mega.nz")
-------
+
+<br />
 ### Source
 
 
