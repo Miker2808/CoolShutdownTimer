@@ -33,3 +33,25 @@ action will take its place. the action can be changed while the timer runs, as t
 The standard title bar that comes with windows 10 is very limited, to keep the modern look I used Qt's built-in features to create a custom title bar with all the features windows 10 has.
 
 ![TitleBar-Showcase](https://i.imgur.com/6fj8lMT.gif)
+======
+### Settings window with preset colors
+
+The software allows customizing your user interface by adding a settings window, allowing you to choose one of the preset color packs.
+
+![PresetColor-Showcase](https://i.imgur.com/iGp3ae1.gif)
+======
+### Custom Color choice, with handmade color picker
+
+The user can choose a custom color for three properties, the picking is done by choosing a color from a custom color picker.
+![CustomColor-Showcase](https://i.imgur.com/jdprm42.gif)
+======
+### Save settings with configuration file
+
+The software creates a config.ini file on first execution, the file will be placed inside the executables directory.
+Having a configuration file allows the user to save his settings and get them loaded on next execution.
+The settings are loaded on construction, and saved on software termination.
+
+(For those who wish to have the source without the configuration file, there exists a branch without config)
+======
+
+
