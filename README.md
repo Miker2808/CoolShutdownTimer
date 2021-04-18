@@ -20,6 +20,7 @@ The timer is based on custom spinbox that is made of buttons and fieldtext, Allo
 The values are validated and allow only integers from a certain value.
 
 ![Timer-Showcase](https://i.imgur.com/VJXEyC8.gif)
+
 ======
 ### The Action Bar
 
@@ -27,24 +28,30 @@ The action bar, allows the user to choose what action to perform once timer reac
 action will take its place. the action can be changed while the timer runs, as the shutdown process executes only at zero seconds.
 
 ![ActionBar-Showcase](https://i.imgur.com/wEq0YUM.gif)
+
 ======
 ### The Custom Title Bar
 
 The standard title bar that comes with windows 10 is very limited, to keep the modern look I used Qt's built-in features to create a custom title bar with all the features windows 10 has.
 
 ![TitleBar-Showcase](https://i.imgur.com/6fj8lMT.gif)
+
 ======
 ### Settings window with preset colors
 
 The software allows customizing your user interface by adding a settings window, allowing you to choose one of the preset color packs.
 
 ![PresetColor-Showcase](https://i.imgur.com/iGp3ae1.gif)
+
 ======
 ### Custom Color choice, with handmade color picker
 
 The user can choose a custom color for three properties, the picking is done by choosing a color from a custom color picker.
+
 ![CustomColor-Showcase](https://i.imgur.com/jdprm42.gif)
+
 ======
+
 ### Save settings with configuration file
 
 The software creates a config.ini file on first execution, the file will be placed inside the executables directory.
@@ -52,6 +59,21 @@ Having a configuration file allows the user to save his settings and get them lo
 The settings are loaded on construction, and saved on software termination.
 
 (For those who wish to have the source without the configuration file, there exists a branch without config)
+
 ======
+## Installation
+
+### Binaries
+------
+For those wishing for a compiled project just for use, a compiled standalone version is available.
+The project was compiled with MSVC2015 x64, therefore it will run only on 64bit Windows. (Software was tested on multiple windows 10 computers)
+All the dynamic Qt libraries are deployed with the executable, deployment was done using 'windeployqt'
+
+Users may get MSVC errors, if you get dll errors, downloading the Microsoft Visual C++ 2015 redistributable may solve the issue.
+If the issue persists, please file an issue.
+
+The Built Binaries can be downloaded [Here](https://mega.nz/file/JA83xYzK#GYoo9cFnoEAI3OLArlccGhmjbfGgmzvos969N24lE0Q "Download Through mega.nz")
+
+### Source
 
 
