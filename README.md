@@ -94,7 +94,7 @@ The steps required to compile the project:
 6. build project
 
 ## Licenses
-Software was developed following Qts General Public License, by using Qt for open source, software must follow GNU license, and disclose the code and its source.
+Software was developed following Qts General Public License, by using Qt for open source, software must follow GPL license, and disclose the code and its source.
 For more information feel free to check Qt's website [Here](https://www.qt.io "Qt website")
 **Icons were developed by me, for free, unlimited use**
 
