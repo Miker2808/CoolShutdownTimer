@@ -73,7 +73,7 @@ All the dynamic Qt libraries are deployed with the executable, deployment was do
 Users may get MSVC errors, if you get dll errors, downloading the Microsoft Visual C++ 2015 redistributable may solve the issue.
 If the issue persists, please file an issue.
 
-The Built Binaries can be downloaded [Here](https://mega.nz/file/JA83xYzK#GYoo9cFnoEAI3OLArlccGhmjbfGgmzvos969N24lE0Q "Download Through mega.nz")
+The Built Binaries can be downloaded [Here](https://mega.nz/file/EIdwyJRL#7XyM9FEXBPew9hxWIxB3Eez6cIPz2HtlrG4Ay3GWwBI "Download Through mega.nz")
 
 To execute, simply extract the folder to a desired location and run the executable
 
