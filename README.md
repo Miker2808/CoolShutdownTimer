@@ -64,7 +64,7 @@ The settings are loaded on construction, and saved on software termination.
 ------
 ## Installation
 
-### Binaries
+### Binaries (Download)
 
 For those wishing for a compiled project just for use, a compiled standalone version is available.
 The project was compiled with MSVC2015 x64, therefore it will run only on 64bit Windows. (Software was tested on multiple windows 10 computers)
@@ -73,7 +73,7 @@ All the dynamic Qt libraries are deployed with the executable, deployment was do
 Users may get MSVC errors, if you get dll errors, downloading the Microsoft Visual C++ 2015 redistributable may solve the issue.
 If the issue persists, please file an issue.
 
-The Built Binaries can be downloaded [Here](https://mega.nz/file/EIdwyJRL#7XyM9FEXBPew9hxWIxB3Eez6cIPz2HtlrG4Ay3GWwBI "Download Through mega.nz")
+The Built Binaries can be downloaded here: [Download](https://mega.nz/file/8d1SEbYY#fTJLZr4u7tGDlw83gcMtaRdlH5yljJKm1whF6hRD9iY "Download Through mega.nz")
 
 To execute, simply extract the folder to a desired location and run the executable
 
